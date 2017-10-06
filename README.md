@@ -1,6 +1,6 @@
-# BT-TMDT-1 - *Name of your app*
+# BT-TMDT-1 - GhostChat
 
-**Name of your app** là một bài tập môn TMDT. Ứng dụng cho phép người dùng gửi tin nhắn (email) cho người dùng khác.
+**GhostChat** là một bài tập môn TMDT. Ứng dụng cho phép người dùng gửi tin nhắn (email) cho người dùng khác.
 
 Thành viên:
 * [ ] **MSSV1** Tên sinh viên 1 (tên tài khoản github)
