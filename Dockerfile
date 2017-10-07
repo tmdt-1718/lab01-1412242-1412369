@@ -2,8 +2,9 @@ FROM ruby
 RUN apt-get update -y
 RUN apt-get install -y nodejs
 RUN gem install rails
-RUN mkdir web
+ADD Gemfile.lock /web/Gemfile.lock
 WORKDIR /web
-EXPOSE 3000
-CMD rails new . --database=postgresql
+ADD . /web
+RUN bundle install
+
 
