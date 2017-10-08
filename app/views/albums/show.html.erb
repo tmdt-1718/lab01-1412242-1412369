@@ -1,33 +1,24 @@
+<legend style="margin-top:10px;">
+  All photos of albums <%= @album%>
+</legend>
+<hr>
 <div class="row">
-  <div class="col-md-3"></div>
-  <div class="col-md-9">
-    <div class="albums row">
-    </h1>
+  <div class="photo row">
     <div class="row" style="margin:15px;">
-      <div class="col-md-4">
-        <img src="<%= @album.cover%>" alt="">
+      <% @photos.each do |photo|%>
+      <div class="card" style="width: 20rem;">
+        <img class="my-img" src="<%= photo.url%>" alt="Card image cap">
+        <div class="card-block">
+          <h4 class="card-title">
+            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+            Poster : <%=photo.poster%>
+          </h4>
+          <p class="card-text">
+            Views : <%= photo.views%>
+          </p>
+        </div>
       </div>
-      <div class="col-md-8">
-        <ul class="infor" style="margin-left:70px;">
-          <li>
-            <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
-            <% if @album.id == 1 %>
-            Album : Flowers
-            <% elsif @album.id == 2%>
-            Album : Cars
-            <% end %>
-          </li>
-          <li>
-            <i class="fa fa-address-book" aria-hidden="true"></i>
-            Owner:
-            <%=@album.owner%></li>
-          <li>
-            <i class="fa fa-eye" aria-hidden="true"></i>
-            Total views:
-            <%= @album.total_views%></li>
-        </ul>
-      </div>
+      <% end %>
     </div>
   </div>
-</div>
 </div>

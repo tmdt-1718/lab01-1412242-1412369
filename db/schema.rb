@@ -32,6 +32,16 @@ ActiveRecord::Schema.define(version: 20171008153827) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "blogs", force: :cascade do |t|
+    t.string "content"
+    t.string "cover"
+    t.integer "views"
+    t.string "poster"
+    t.string "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "photos", force: :cascade do |t|
     t.string "poster"
     t.integer "views"
