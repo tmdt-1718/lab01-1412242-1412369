@@ -6,4 +6,4 @@
 //= require home.js
 //= require albums.js
 //= require about.js
-//= require blog.js
+//= require blogs.js
