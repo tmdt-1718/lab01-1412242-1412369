@@ -9,12 +9,9 @@ Article.delete_all
 (1..2).each do |number|
     Article.create!(title:"title #{number}",body:"body #{number}",user_id:1)
 end
-User.delete_all
 Photo.delete_all
 Album.delete_all
 
-User.create!(name:"nhan",email:"nhan@gmail.com",password:"123123")
-User.create!(name:"khanh",email:"khanh@gmail.com",password:"123123")
 Album.create!(cover:"https://static.pexels.com/photos/36764/marguerite-daisy-beautiful-beauty.jpg",
 owner:"khanh",total_views:20)
 Album.create!(cover:"https://static.pexels.com/photos/210019/pexels-photo-210019.jpeg",
