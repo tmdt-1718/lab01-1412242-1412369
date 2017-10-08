@@ -13,17 +13,10 @@ Photo.delete_all
 Album.delete_all
 Blog.delete_all
 
-User.create!(name: 'nhan', email: 'nhan@gmail.com', password: '123123')
-User.create!(name: 'khanh', email: 'khanh@gmail.com', password: '123123')
 album1 =Album.create!(cover: 'https://static.pexels.com/photos/36764/marguerite-daisy-beautiful-beauty.jpg',
               owner: 'khanh', total_views: 20)
 album2=Album.create!(cover: 'https://static.pexels.com/photos/210019/pexels-photo-210019.jpeg',
               owner: 'nhan', total_views: 50)
-Album.create!(cover:"https://static.pexels.com/photos/36764/marguerite-daisy-beautiful-beauty.jpg",
-owner:"khanh",total_views:20)
-Album.create!(cover:"https://static.pexels.com/photos/210019/pexels-photo-210019.jpeg",
-owner:"nhan",total_views:50)
-
 # ALbum 1
 (1..10).each do |number|
   Photo.create!(
