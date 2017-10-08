@@ -1,3 +1,30 @@
-// Place all the styles related to the about controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+  background: #34495e;
+}
+.my-card {
+  @extend .card;
+  margin:15px;
+}
+.infor li {
+  margin:10px;
+  font: 15px;
+}
+.infor {
+  @extend .list-group;
+}
+.my-image{
+  margin-top: 50px;
+
+}
+.my-image img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+.my-image .row {
+  border-left:2px solid green ;
+  background: white;
+  padding:10px;
+  border-radius: 10px;
+  width: 900px;
+}
