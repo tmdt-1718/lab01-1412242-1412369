@@ -1,0 +1,24 @@
+<legend style="margin-top:10px;">
+  All photos of albums <%= @album%>
+</legend>
+<hr>
+<div class="row">
+  <div class="photo row">
+    <div class="row" style="margin:15px;">
+      <% @photos.each do |photo|%>
+      <div class="card" style="width: 20rem;">
+        <img class="my-img" src="<%= photo.url%>" alt="Card image cap">
+        <div class="card-block">
+          <h4 class="card-title">
+            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+            Poster : <%=photo.poster%>
+          </h4>
+          <p class="card-text">
+            Views : <%= photo.views%>
+          </p>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

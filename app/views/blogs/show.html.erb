@@ -1,0 +1,45 @@
+<div class="blogs-show">
+  <div class="col-md-7">
+    <h4>Short title here</h4>
+    <div class="row" style="margin-top:20px;">
+      <i class="fa fa-calendar" style="margin-right:15px;" aria-hidden="true"></i>
+      <%=@blog.created_at.strftime("%d - %m - %Y")%>
+      <i class="fa fa-eye" style="margin-right:15px;margin-left:30px;" aria-hidden="true"></i>
+      <%=@blog.views%>
+    </div>
+    <hr>
+    <div class="row">
+      <img src="<%=@blog.cover%>" width="100%" alt="">
+    </div>
+    <div class="content">
+      <p>
+        <%=@blog.content%>
+        <%=@blog.content%>
+        <%=@blog.content%>
+        <%=@blog.content%>
+        <%=@blog.content%>
+        <%=@blog.content%>
+      </p>
+    </div>
+  </div>
+  <div class="col-md-5" style="margin-top:53px;">
+    <h6>order blog</h6>
+    <hr>
+    <% @blogs.each do |blog|%>
+    <div class="row" style="margin-top:20px;">
+      <div class="col-md-3">
+        <img src="<%=blog.cover%>" width="100px" height="100px" alt="">
+      </div>
+      <div class="col-md-9">
+        <h6>
+          <%= link_to blog.title.truncate(80, omission: '... (continued)'), blog_path(blog.id)%></h6>
+        <div class="row">
+          <i class="fa fa-calendar" style="margin-left:15px;" aria-hidden="true"></i>
+          <%=blog.created_at.strftime("%d - %m - %Y")%>
+        </div>
+
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>

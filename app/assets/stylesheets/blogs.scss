@@ -1,0 +1,19 @@
+.blogs-main{
+margin:20px;
+}
+.blogs{
+  @extend .row;
+  margin:15px;
+  img {
+    width: 200px;
+    height: 200px;
+  }
+  .content{
+    @extend .col-md-8;
+  }
+}
+
+.blogs-show{
+  @extend .row;
+  margin:20px;
+}

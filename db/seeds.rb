@@ -7,5 +7,38 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Article.delete_all
 (1..2).each do |number|
-    Article.create!(title:"title #{number}",body:"body #{number}",user_id:1)
+  Article.create!(title: "title #{number}", body: "body #{number}", user_id: 1)
+end
+Photo.delete_all
+Album.delete_all
+Blog.delete_all
+
+album1 =Album.create!(cover: 'https://static.pexels.com/photos/36764/marguerite-daisy-beautiful-beauty.jpg',
+              owner: 'khanh', total_views: 20)
+album2=Album.create!(cover: 'https://static.pexels.com/photos/210019/pexels-photo-210019.jpeg',
+              owner: 'nhan', total_views: 50)
+# ALbum 1
+(1..10).each do |number|
+  Photo.create!(
+    poster: 'user1',
+    views: 5,
+    url: "/khanh/img#{number}.jpg",
+    album:  album1.id
+  )
+  Photo.create!(
+    poster: 'user2',
+    views: 5,
+    url: "/nhan/img#{number}.jpg",
+    album: album2.id
+  )
+end
+
+(1..10).each do |number|
+  Blog.create!(
+    poster: Faker::Name.name,
+    views: Faker::Number.number(2),
+    cover: "/cover/img#{number}.jpg",
+    content: Faker::Lorem.paragraph,
+    title: Faker::Lorem.sentences
+  )
 end

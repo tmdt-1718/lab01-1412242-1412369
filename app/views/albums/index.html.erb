@@ -1,2 +1,36 @@
-<h1>Albums#index</h1>
-<p>Find me in app/views/albums/index.html.erb</p>
+<div class="row">
+    <div class="albums row">
+      <% @albums.each do |album|%>
+    </h1>
+    <div class="row" style="margin:15px;">
+      <div class="col-md-4">
+        <img src="<%=album.cover%>" alt="">
+      </div>
+      <div class="col-md-8">
+        <ul class="infor" style="margin-left:70px;">
+          <li>
+            <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+            <% if album.id == 1 %>
+            Album : Flowers
+            <% elsif album.id == 2%>
+            Album : Cars
+            <% end %>
+          </li>
+          <li>
+            <i class="fa fa-address-book" aria-hidden="true"></i>
+            Owner:
+            <%=album.owner%></li>
+          <li>
+            <i class="fa fa-eye" aria-hidden="true"></i>
+            Total views:
+            <%= album.total_views%></li>
+          <li>
+            <i class="fa fa-info-circle" aria-hidden="true"></i>
+            <%= link_to "Details", album_path(album.id)%>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
