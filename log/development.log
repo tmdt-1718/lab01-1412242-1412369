@@ -3536,3 +3536,597 @@ Processing by BlogsController#show as HTML
 Completed 200 OK in 43ms (Views: 41.5ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 172.22.0.1 at 2017-10-09 13:25:26 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.4) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6955016089055575695)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20171008153827)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (22.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171008153827"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6955016089055575695)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 172.22.0.1 at 2017-10-09 13:25:50 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (1.7ms)
+Completed 200 OK in 13ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 172.22.0.1 at 2017-10-09 13:26:04 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 14ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/login" for 172.22.0.1 at 2017-10-09 13:26:04 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (467.0ms)
+  Rendered layouts/partials/_nav.html.erb (0.6ms)
+  Rendered layouts/partials/_footer.html.erb (0.2ms)
+Completed 200 OK in 3647ms (Views: 3646.0ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[31mDELETE FROM "articles"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "title 1"], ["body", "body 1"], ["user_id", "1"], ["created_at", "2017-10-09 13:26:19.454866"], ["updated_at", "2017-10-09 13:26:19.454866"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "title 2"], ["body", "body 2"], ["user_id", "1"], ["created_at", "2017-10-09 13:26:19.459034"], ["updated_at", "2017-10-09 13:26:19.459034"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[31mDELETE FROM "photos"[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[31mDELETE FROM "albums"[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[31mDELETE FROM "blogs"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "albums" ("cover", "owner", "total_views", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["cover", "https://static.pexels.com/photos/36764/marguerite-daisy-beautiful-beauty.jpg"], ["owner", "khanh"], ["total_views", 20], ["created_at", "2017-10-09 13:26:19.483240"], ["updated_at", "2017-10-09 13:26:19.483240"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "albums" ("cover", "owner", "total_views", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["cover", "https://static.pexels.com/photos/210019/pexels-photo-210019.jpeg"], ["owner", "nhan"], ["total_views", 50], ["created_at", "2017-10-09 13:26:19.486810"], ["updated_at", "2017-10-09 13:26:19.486810"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "photos" ("poster", "views", "url", "album", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["poster", "user1"], ["views", 5], ["url", "/khanh/img1.jpg"], ["album", "5"], ["created_at", "2017-10-09 13:26:19.498501"], ["updated_at", "2017-10-09 13:26:19.498501"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("poster", "views", "url", "album", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["poster", "user2"], ["views", 5], ["url", "/nhan/img1.jpg"], ["album", "6"], ["created_at", "2017-10-09 13:26:19.501472"], ["updated_at", "2017-10-09 13:26:19.501472"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("poster", "views", "url", "album", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["poster", "user1"], ["views", 5], ["url", "/khanh/img2.jpg"], ["album", "5"], ["created_at", "2017-10-09 13:26:19.503993"], ["updated_at", "2017-10-09 13:26:19.503993"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("poster", "views", "url", "album", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["poster", "user2"], ["views", 5], ["url", "/nhan/img2.jpg"], ["album", "6"], ["created_at", "2017-10-09 13:26:19.506399"], ["updated_at", "2017-10-09 13:26:19.506399"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("poster", "views", "url", "album", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["poster", "user1"], ["views", 5], ["url", "/khanh/img3.jpg"], ["album", "5"], ["created_at", "2017-10-09 13:26:19.508697"], ["updated_at", "2017-10-09 13:26:19.508697"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("poster", "views", "url", "album", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["poster", "user2"], ["views", 5], ["url", "/nhan/img3.jpg"], ["album", "6"], ["created_at", "2017-10-09 13:26:19.510993"], ["updated_at", "2017-10-09 13:26:19.510993"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "photos" ("poster", "views", "url", "album", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["poster", "user1"], ["views", 5], ["url", "/khanh/img4.jpg"], ["album", "5"], ["created_at", "2017-10-09 13:26:19.513162"], ["updated_at", "2017-10-09 13:26:19.513162"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("poster", "views", "url", "album", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["poster", "user2"], ["views", 5], ["url", "/nhan/img4.jpg"], ["album", "6"], ["created_at", "2017-10-09 13:26:19.515219"], ["updated_at", "2017-10-09 13:26:19.515219"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("poster", "views", "url", "album", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["poster", "user1"], ["views", 5], ["url", "/khanh/img5.jpg"], ["album", "5"], ["created_at", "2017-10-09 13:26:19.517797"], ["updated_at", "2017-10-09 13:26:19.517797"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("poster", "views", "url", "album", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["poster", "user2"], ["views", 5], ["url", "/nhan/img5.jpg"], ["album", "6"], ["created_at", "2017-10-09 13:26:19.520026"], ["updated_at", "2017-10-09 13:26:19.520026"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("poster", "views", "url", "album", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["poster", "user1"], ["views", 5], ["url", "/khanh/img6.jpg"], ["album", "5"], ["created_at", "2017-10-09 13:26:19.522274"], ["updated_at", "2017-10-09 13:26:19.522274"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "photos" ("poster", "views", "url", "album", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["poster", "user2"], ["views", 5], ["url", "/nhan/img6.jpg"], ["album", "6"], ["created_at", "2017-10-09 13:26:19.524402"], ["updated_at", "2017-10-09 13:26:19.524402"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("poster", "views", "url", "album", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["poster", "user1"], ["views", 5], ["url", "/khanh/img7.jpg"], ["album", "5"], ["created_at", "2017-10-09 13:26:19.526484"], ["updated_at", "2017-10-09 13:26:19.526484"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("poster", "views", "url", "album", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["poster", "user2"], ["views", 5], ["url", "/nhan/img7.jpg"], ["album", "6"], ["created_at", "2017-10-09 13:26:19.528545"], ["updated_at", "2017-10-09 13:26:19.528545"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("poster", "views", "url", "album", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["poster", "user1"], ["views", 5], ["url", "/khanh/img8.jpg"], ["album", "5"], ["created_at", "2017-10-09 13:26:19.530744"], ["updated_at", "2017-10-09 13:26:19.530744"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "photos" ("poster", "views", "url", "album", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["poster", "user2"], ["views", 5], ["url", "/nhan/img8.jpg"], ["album", "6"], ["created_at", "2017-10-09 13:26:19.533037"], ["updated_at", "2017-10-09 13:26:19.533037"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "photos" ("poster", "views", "url", "album", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["poster", "user1"], ["views", 5], ["url", "/khanh/img9.jpg"], ["album", "5"], ["created_at", "2017-10-09 13:26:19.535588"], ["updated_at", "2017-10-09 13:26:19.535588"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "photos" ("poster", "views", "url", "album", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["poster", "user2"], ["views", 5], ["url", "/nhan/img9.jpg"], ["album", "6"], ["created_at", "2017-10-09 13:26:19.538057"], ["updated_at", "2017-10-09 13:26:19.538057"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "photos" ("poster", "views", "url", "album", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["poster", "user1"], ["views", 5], ["url", "/khanh/img10.jpg"], ["album", "5"], ["created_at", "2017-10-09 13:26:19.541116"], ["updated_at", "2017-10-09 13:26:19.541116"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "photos" ("poster", "views", "url", "album", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["poster", "user2"], ["views", 5], ["url", "/nhan/img10.jpg"], ["album", "6"], ["created_at", "2017-10-09 13:26:19.543821"], ["updated_at", "2017-10-09 13:26:19.543821"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "blogs" ("content", "cover", "views", "title", "poster", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["content", "Nemo consequuntur odio sunt suscipit est eos voluptatem. Qui illum est. In aut provident. Itaque distinctio quo."], ["cover", "/cover/img1.jpg"], ["views", 89], ["title", "[\"Commodi et aut dignissimos officiis.\", \"Porro quo molestiae enim quod inventore repellat aut.\", \"Quia aliquid placeat vel tenetur ut nesciunt.\"]"], ["poster", "Tia Breitenberg"], ["created_at", "2017-10-09 13:26:19.984863"], ["updated_at", "2017-10-09 13:26:19.984863"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "blogs" ("content", "cover", "views", "title", "poster", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["content", "Deleniti at sapiente. Consequatur doloremque eveniet architecto magni reprehenderit. Enim autem velit dolores. At expedita dicta neque commodi natus et voluptatem. Sed magnam ea accusantium ullam ipsam minima rerum."], ["cover", "/cover/img2.jpg"], ["views", 55], ["title", "[\"At molestiae nam ut eveniet labore quo.\", \"Dolor voluptatibus odio deserunt.\", \"Ex nobis odit sit saepe ut ut ea.\"]"], ["poster", "Darby Smitham"], ["created_at", "2017-10-09 13:26:19.988893"], ["updated_at", "2017-10-09 13:26:19.988893"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "blogs" ("content", "cover", "views", "title", "poster", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["content", "Adipisci in iusto id libero dicta cupiditate reprehenderit. Reiciendis facere officiis vel cupiditate ut ut. Nihil magni error et placeat doloribus. Sed consequatur dignissimos omnis. Itaque officia nulla totam maxime excepturi sequi voluptatem."], ["cover", "/cover/img3.jpg"], ["views", 68], ["title", "[\"Qui et aliquid.\", \"Temporibus vero blanditiis nemo minus.\", \"Omnis et enim provident.\"]"], ["poster", "Ulices Hartmann"], ["created_at", "2017-10-09 13:26:19.992301"], ["updated_at", "2017-10-09 13:26:19.992301"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "blogs" ("content", "cover", "views", "title", "poster", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["content", "Iste tempora velit tempore provident cupiditate. Consequuntur ducimus ut vel. Voluptatem quos quasi id voluptas incidunt et. Consectetur non qui dicta voluptatem facilis illo."], ["cover", "/cover/img4.jpg"], ["views", 81], ["title", "[\"Tenetur dolorem ipsum facilis dolorum deserunt ab.\", \"Ipsam officiis numquam.\", \"Maxime veniam illum quia laborum voluptas.\"]"], ["poster", "Deondre Treutel"], ["created_at", "2017-10-09 13:26:19.995608"], ["updated_at", "2017-10-09 13:26:19.995608"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "blogs" ("content", "cover", "views", "title", "poster", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["content", "Odio inventore eum omnis distinctio consequatur blanditiis nisi. Dolorum quia maxime culpa id consequatur praesentium ut. Quibusdam alias perferendis sit maxime sed officia possimus."], ["cover", "/cover/img5.jpg"], ["views", 88], ["title", "[\"Perferendis quod totam adipisci et nisi.\", \"Accusamus rerum consequatur libero dignissimos quod temporibus.\", \"Aut voluptatem explicabo iusto et.\"]"], ["poster", "Ettie Batz"], ["created_at", "2017-10-09 13:26:19.998799"], ["updated_at", "2017-10-09 13:26:19.998799"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "blogs" ("content", "cover", "views", "title", "poster", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["content", "Numquam et adipisci odit et molestias. Impedit consequuntur itaque doloribus soluta ut illum. Ratione alias libero perspiciatis illo. Ullam deleniti nesciunt rerum. Quia et quibusdam quis."], ["cover", "/cover/img6.jpg"], ["views", 90], ["title", "[\"Quo aut et iusto cumque adipisci.\", \"Error fugiat similique aut.\", \"Debitis aut omnis.\"]"], ["poster", "Dr. Louvenia Wehner"], ["created_at", "2017-10-09 13:26:20.004541"], ["updated_at", "2017-10-09 13:26:20.004541"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "blogs" ("content", "cover", "views", "title", "poster", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["content", "Commodi aut rem sint maiores inventore. Voluptates quasi ea voluptatem magnam fuga quia iure. Eveniet eos qui nostrum iure. Culpa nobis cupiditate consequatur repellat in explicabo consectetur. Est sequi inventore."], ["cover", "/cover/img7.jpg"], ["views", 63], ["title", "[\"Aut qui sit numquam rem laboriosam.\", \"Non culpa ut reprehenderit rem.\", \"Sint facere vero sint.\"]"], ["poster", "Vida Bashirian"], ["created_at", "2017-10-09 13:26:20.008121"], ["updated_at", "2017-10-09 13:26:20.008121"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "blogs" ("content", "cover", "views", "title", "poster", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["content", "In debitis molestiae corporis enim possimus. Sit expedita omnis architecto illo vero. Omnis quia nihil ipsum quis saepe aspernatur ad."], ["cover", "/cover/img8.jpg"], ["views", 29], ["title", "[\"Nam voluptatem cumque esse nihil amet.\", \"Optio sapiente et repudiandae reprehenderit et velit soluta.\", \"Rerum soluta excepturi ullam sunt.\"]"], ["poster", "Katrina Waters"], ["created_at", "2017-10-09 13:26:20.011496"], ["updated_at", "2017-10-09 13:26:20.011496"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "blogs" ("content", "cover", "views", "title", "poster", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["content", "Aut eligendi enim. Voluptatem sed magnam ut ut accusantium rerum est. Rerum et impedit doloribus sit minus et atque."], ["cover", "/cover/img9.jpg"], ["views", 57], ["title", "[\"Enim porro doloremque minima.\", \"Voluptas nobis culpa aspernatur vel et.\", \"Sit tenetur quidem corrupti architecto maiores id.\"]"], ["poster", "Cleora Howell"], ["created_at", "2017-10-09 13:26:20.014690"], ["updated_at", "2017-10-09 13:26:20.014690"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "blogs" ("content", "cover", "views", "title", "poster", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["content", "Repellendus voluptatem ipsam. Et aliquid rem eos in aliquam. Officiis voluptatibus unde ipsum dicta. Temporibus sint praesentium et aut architecto est porro. Quae qui omnis quasi et excepturi assumenda."], ["cover", "/cover/img10.jpg"], ["views", 59], ["title", "[\"Sit velit suscipit doloremque quo ut nemo enim.\", \"Ea debitis ab sed qui eos sed quo.\", \"Odio ut odit deserunt.\"]"], ["poster", "Yvette Ritchie"], ["created_at", "2017-10-09 13:26:20.018597"], ["updated_at", "2017-10-09 13:26:20.018597"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/login" for 172.22.0.1 at 2017-10-09 13:26:21 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZKm9Vn8cgHo1saPHc6RFcaSR+vaMciebn+TO+Rnz766jFhrxuYNE7pqZ4nin63cobqekfL54eC6H+qiXpT7RQA==", "session"=>{"name"=>"123321", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "123321"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+  Rendered layouts/partials/_nav.html.erb (0.5ms)
+  Rendered layouts/partials/_footer.html.erb (0.2ms)
+Completed 200 OK in 71ms (Views: 66.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/albums" for 172.22.0.1 at 2017-10-09 13:26:44 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AlbumsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/login" for 172.22.0.1 at 2017-10-09 13:26:44 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.4ms)
+  Rendered layouts/partials/_nav.html.erb (1.1ms)
+  Rendered layouts/partials/_footer.html.erb (0.8ms)
+Completed 200 OK in 75ms (Views: 73.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 172.22.0.1 at 2017-10-09 13:26:46 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AboutController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for 172.22.0.1 at 2017-10-09 13:26:46 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+  Rendered layouts/partials/_nav.html.erb (0.6ms)
+  Rendered layouts/partials/_footer.html.erb (0.3ms)
+Completed 200 OK in 48ms (Views: 46.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 172.22.0.1 at 2017-10-09 13:26:46 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for 172.22.0.1 at 2017-10-09 13:26:46 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+  Rendered layouts/partials/_nav.html.erb (0.5ms)
+  Rendered layouts/partials/_footer.html.erb (0.2ms)
+Completed 200 OK in 49ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 172.22.0.1 at 2017-10-09 13:26:47 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AboutController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for 172.22.0.1 at 2017-10-09 13:26:47 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+  Rendered layouts/partials/_nav.html.erb (0.5ms)
+  Rendered layouts/partials/_footer.html.erb (0.2ms)
+Completed 200 OK in 51ms (Views: 49.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/albums" for 172.22.0.1 at 2017-10-09 13:26:47 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AlbumsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/login" for 172.22.0.1 at 2017-10-09 13:26:47 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+  Rendered layouts/partials/_nav.html.erb (0.5ms)
+  Rendered layouts/partials/_footer.html.erb (0.2ms)
+Completed 200 OK in 51ms (Views: 50.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 172.22.0.1 at 2017-10-09 13:26:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 172.22.0.1 at 2017-10-09 13:26:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+  Rendered layouts/partials/_nav.html.erb (0.6ms)
+  Rendered layouts/partials/_footer.html.erb (0.2ms)
+Completed 200 OK in 44ms (Views: 43.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 172.22.0.1 at 2017-10-09 13:29:30 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (469.5ms)
+  Rendered layouts/partials/_nav.html.erb (0.5ms)
+  Rendered layouts/partials/_footer.html.erb (0.2ms)
+Completed 200 OK in 671ms (Views: 663.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/register" for 172.22.0.1 at 2017-10-09 13:29:33 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/register"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/login/new" for 172.22.0.1 at 2017-10-09 13:29:39 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/login/new"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/new" for 172.22.0.1 at 2017-10-09 13:30:12 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.0ms)
+  Rendered layouts/partials/_nav.html.erb (0.6ms)
+  Rendered layouts/partials/_footer.html.erb (0.3ms)
+Completed 200 OK in 59ms (Views: 45.2ms | ActiveRecord: 4.9ms)
+
+
+Started POST "/users" for 172.22.0.1 at 2017-10-09 13:30:31 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U38Yd//oucCDB3+c2i0PTFykRbWSLDAPtKBb9HKP2EUP8CvkLdMQUuXLnYJwc+D+fRUWCtrNX+7Y1yE+T8uqhQ==", "user"=>{"name"=>"nhan", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "nhan"], ["password_digest", "$2a$10$WqMkxTTzKlzFK0.RgGN7wuEamPNrQl6XENwuUwsC4.RYMnylxvMDm"], ["created_at", "2017-10-09 13:30:31.667082"], ["updated_at", "2017-10-09 13:30:31.667082"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 77ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/users" for 172.22.0.1 at 2017-10-09 13:30:31 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/login" for 172.22.0.1 at 2017-10-09 13:30:31 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+  Rendered layouts/partials/_nav.html.erb (0.6ms)
+  Rendered layouts/partials/_footer.html.erb (0.2ms)
+Completed 200 OK in 44ms (Views: 43.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 172.22.0.1 at 2017-10-09 13:30:34 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UO58xfbjSZzSXTMZRBROOPKKeOM7aGtLRoSdR2b8fFyXUdtiMHyNCH11cqaQW3xhOLwmaQliNP5emvsp2jFCsg==", "session"=>{"name"=>"nhan", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "nhan"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 78ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/users/1" for 172.22.0.1 at 2017-10-09 13:30:34 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/partials/_nav.html.erb (0.6ms)
+  Rendered layouts/partials/_footer.html.erb (0.3ms)
+Completed 200 OK in 47ms (Views: 42.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/albums" for 172.22.0.1 at 2017-10-09 13:30:37 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AlbumsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering albums/index.html.erb within layouts/application
+  [1m[36mAlbum Load (0.7ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered albums/index.html.erb within layouts/application (19.6ms)
+  Rendered layouts/partials/_nav.html.erb (0.5ms)
+  Rendered layouts/partials/_footer.html.erb (0.4ms)
+Completed 200 OK in 78ms (Views: 67.0ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/about" for 172.22.0.1 at 2017-10-09 13:30:39 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AboutController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/partials/_nav.html.erb (0.6ms)
+  Rendered layouts/partials/_footer.html.erb (0.3ms)
+Completed 200 OK in 48ms (Views: 45.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/blogs" for 172.22.0.1 at 2017-10-09 13:30:41 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.7ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (15.7ms)
+  Rendered layouts/partials/_nav.html.erb (0.5ms)
+  Rendered layouts/partials/_footer.html.erb (0.2ms)
+Completed 200 OK in 64ms (Views: 54.1ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/blogs/50" for 172.22.0.1 at 2017-10-09 13:30:43 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"50"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  Rendering blogs/show.html.erb within layouts/application
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 5]]
+  Rendered blogs/show.html.erb within layouts/application (3.3ms)
+  Rendered layouts/partials/_nav.html.erb (0.6ms)
+  Rendered layouts/partials/_footer.html.erb (0.3ms)
+Completed 200 OK in 50ms (Views: 43.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/blogs/51" for 172.22.0.1 at 2017-10-09 13:30:45 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"51"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  Rendering blogs/show.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 5]]
+  Rendered blogs/show.html.erb within layouts/application (2.9ms)
+  Rendered layouts/partials/_nav.html.erb (0.7ms)
+  Rendered layouts/partials/_footer.html.erb (0.3ms)
+Completed 200 OK in 51ms (Views: 46.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/blogs/47" for 172.22.0.1 at 2017-10-09 13:30:47 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"47"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  Rendering blogs/show.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 5]]
+  Rendered blogs/show.html.erb within layouts/application (3.7ms)
+  Rendered layouts/partials/_nav.html.erb (0.5ms)
+  Rendered layouts/partials/_footer.html.erb (0.2ms)
+Completed 200 OK in 56ms (Views: 51.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/blogs/48" for 172.22.0.1 at 2017-10-09 13:30:48 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  Rendering blogs/show.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 5]]
+  Rendered blogs/show.html.erb within layouts/application (2.8ms)
+  Rendered layouts/partials/_nav.html.erb (0.5ms)
+  Rendered layouts/partials/_footer.html.erb (0.2ms)
+Completed 200 OK in 47ms (Views: 42.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/albums" for 172.22.0.1 at 2017-10-09 13:30:51 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AlbumsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering albums/index.html.erb within layouts/application
+  [1m[36mAlbum Load (0.7ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered albums/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/partials/_nav.html.erb (0.5ms)
+  Rendered layouts/partials/_footer.html.erb (0.3ms)
+Completed 200 OK in 46ms (Views: 43.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/albums/5" for 172.22.0.1 at 2017-10-09 13:30:52 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering albums/show.html.erb within layouts/application
+  [1m[36mPhoto Load (0.8ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE (album='5')[0m
+  Rendered albums/show.html.erb within layouts/application (14.8ms)
+  Rendered layouts/partials/_nav.html.erb (0.5ms)
+  Rendered layouts/partials/_footer.html.erb (0.2ms)
+Completed 200 OK in 62ms (Views: 52.6ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/about" for 172.22.0.1 at 2017-10-09 13:30:55 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AboutController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/partials/_nav.html.erb (0.5ms)
+  Rendered layouts/partials/_footer.html.erb (0.2ms)
+Completed 200 OK in 46ms (Views: 43.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/blogs" for 172.22.0.1 at 2017-10-09 13:30:56 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (5.2ms)
+  Rendered layouts/partials/_nav.html.erb (0.6ms)
+  Rendered layouts/partials/_footer.html.erb (0.2ms)
+Completed 200 OK in 56ms (Views: 52.7ms | ActiveRecord: 1.1ms)
+
+
