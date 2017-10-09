@@ -6,18 +6,21 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/albums">Album</a>
-      </li>
-      <li class="nav-item"  >
-        <a class="nav-link" href="/about">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/blogs">Blog</a>
-      </li>
+        <% if logged_in? %>
+          <li class="nav-item">
+             <a class="nav-link" href="#">Hi, <%= @current_user.name %></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../logout">Logout</a>
+          </li>
+        <% else %>
+          <li class="nav-item">
+             <a class="nav-link" href="../login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../users/new">Register</a>
+          </li>
+        <% end; %>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
@@ -34,23 +37,23 @@
                 </button>
                 <div class="navbar-collapse collapse flex-column left-menu" id="navbarWEX">
                   <ul class="navbar-nav flex-column">
-                   <li class="nav-item active">
-                      <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+                   <li class="nav-item">
+                      <a class="nav-link" href="../home">Home</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="/albums">Album</a>
+                      <a class="nav-link" href="../albums">Album</a>
                     </li>
                     <li class="nav-item"  >
-                      <a class="nav-link" href="/about">About</a>
+                      <a class="nav-link" href="../about">About</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="/blogs">Blog</a>
+                      <a class="nav-link" href="../blogs">Blog</a>
                     </li>
                   </ul>
                 </div>
             </nav>
         </div>
-        <div class=" col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+        <div class=" col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10 bg-light">
           <%= yield %>
           <section class="content" style="min-height: auto;">
             <% flash.each do |key, value| %>

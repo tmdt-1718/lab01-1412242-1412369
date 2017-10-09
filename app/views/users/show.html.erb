@@ -1,10 +1,13 @@
+<ol class="breadcrumb bg-light">
+      <li class="breadcrumb-item"><a href="../home">Home</a></li>
+      <li class="breadcrumb-item active">User</li>
+</ol>
 <div class="container">
   <div class="row">
     <div class="col-lg-offset-3 col-lg-6">
       <div class="text-left">
-        <label><%= @user.name %></label>
+        <label>Welcom back, <%= @user.name %> !!!! Logged in !!!!</label>
       </div>
-      <%= link_to "Logout", logout_path, method: :delete %>
     </div>
   </div>
 </div>
