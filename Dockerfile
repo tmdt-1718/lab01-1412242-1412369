@@ -6,5 +6,3 @@ ADD Gemfile.lock /web/Gemfile.lock
 WORKDIR /web
 ADD . /web
 RUN bundle install
-
-
