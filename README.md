@@ -14,7 +14,7 @@ Sinh viên check vào các mục bên dưới và ghi mã sinh viên đã làm v
 
 Yêu cầu **GIT**:
 * [x] Sử dụng GIT theo [Feature Branch Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows#feature-branch-workflow).
-   (Do sơ ý, nhóm đã xóa source của các branch nhỏ sau khi đã merge, nên không thể tìm thấy các branch cũ, nhóm sẽ khắc phục trong lab kế)
+   **(Do sơ ý, nhóm đã xóa source của các branch nhỏ sau khi đã merge, nên không thể tìm thấy các branch cũ, nhóm sẽ khắc phục trong lab kế)**
 Yêu cầu **bắt buộc**
 * [x] Thiết kế trang web theo responsive với bootstrap với header (navigation bar, logo), left menu, footer và content. (**1412242**)
 * [x] Navigation bar sẽ ẩn đi với kích thước màn hình nhỏ hơn 992px và có nút nhấn để hiển thị navigation bar. (**1412242**)
